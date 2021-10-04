@@ -92,6 +92,16 @@ const Contact = ({ history }) => {
                       satis@ecoleliving.com
                     </a>
                   </div>
+                  <div className="list">
+                    <i className="fa fa-phone"></i>
+                    <a
+                      href="https://wa.me/+905326597406"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      0532 659 74 06
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

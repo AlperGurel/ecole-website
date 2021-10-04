@@ -20,7 +20,7 @@ const BaseBarStyle = styled.div`
   height: 4px;
   background-color: white;
   transition: width 0.2s ease-in-out, transform 0.2s ease-in-out,
-  opacity 0.2s ease-in-out;
+    opacity 0.2s ease-in-out;
 `;
 
 export const Bar1 = styled(BaseBarStyle)`
@@ -41,6 +41,7 @@ const BaseCircle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  background-color: transparent !important;
 `;
 
 const Circle = styled(BaseCircle)`
@@ -55,7 +56,7 @@ const Circle = styled(BaseCircle)`
             position: absolute;
             width: 100%;
             top: 50%;
-            background-color: black;
+            background-color: transparent !important;
             transform: translateY(-50%) rotate(45deg);
           }
           ${Bar2} {
@@ -67,7 +68,7 @@ const Circle = styled(BaseCircle)`
             position: absolute;
             width: 100%;
             top: 50%;
-            background-color: black;
+            background-color: transparent !important;
             transform: translateY(-50%) rotate(-45deg);
           }
         `

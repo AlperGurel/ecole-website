@@ -14,17 +14,15 @@ export default () => (
       <div className="col-md-6">
         <div className="dflex-center">
           <div className="col-home mt-md-0 mt-5">
-            <div className="heading">We Are Interior Design</div>
+            <div className="heading">Hakkımızda</div>
             <div className="content">
-              2005 yılında İnegöl'de kurulan Ecole Living mobilya firmamız
-              kurulduğu günden bugüne siz değerli müşterilerimiz için kalite ve
-              konfor güvencesiyle durmadan üretmeye devam ediyor. Her zevke
-              uygun farklı konseptler için titizlikle tasarlanan
-              mobilyalarımızla kaliteden ve müşteri memnuniyetinden ödün
-              vermeden yaşam alanlarınıza dokunmayı başarıyoruz. Alanında uzman,
-              güçlü ve dinamik ekibimizle mobilya alanında yükselmeye devam
-              ediyor ve trendleri takip ederek müşteri memnuniyetini en üste
-              çıkarmayı hedefliyoruz.
+              Bir mobilya değil yaşam markası olma felsefesi ile yola çıkan
+              Ecole living; hayatınıza değer katmak için yanınızda. İçmimar Esat
+              Fişek tarafından tasarlanan Ecole living mobilyaları, şıklığı ve
+              rahatlığı yeniden tanımlayarak hayatınızı şekillendiriyor.
+              Zamansız çizgisini samimi detaylar ve kaliteli malzemeler ile
+              birleştiren Ecole living, uzun yıllar yaşam alanlarınızda olmaya
+              aday.
             </div>
             <ul className="list-home">
               <li>Özgün Tasarımlar</li>

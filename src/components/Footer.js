@@ -9,7 +9,7 @@ export default () => (
       <div className="col-md-4">
         <div className="footer-col">
           <div className="heading">
-            <h2>Kısaca</h2>
+            <h2>Hayatı Şekillendir</h2>
           </div>
           <div className="content">
             <p>
@@ -29,23 +29,19 @@ export default () => (
       </div>
       <div className="col-md-2">
         <div className="footer-col">
-          <div className="heading">Usefull link</div>
+          <div className="heading">Hızlı Linkler</div>
           <div className="content">
-            <div className="link">Frequently Asked</div>
-            <div className="link">Terms & Conditions</div>
-            <div className="link">Help Center</div>
-            <div className="link">Contact Us</div>
+            <div className="link">Anasayfa</div>
+            <div className="link">Hakkımızda</div>
           </div>
         </div>
       </div>
       <div className="col-md-2">
         <div className="footer-col">
-          <div className="heading">Features</div>
+          <div className="heading">Hızlı Linkler</div>
           <div className="content">
-            <div className="link">Career</div>
-            <div className="link">Brand Identity</div>
-            <div className="link">Investment</div>
-            <div className="link">Agency Patner</div>
+            <div className="link">Koleksiyon</div>
+            <div className="link">İletişim</div>
           </div>
         </div>
       </div>

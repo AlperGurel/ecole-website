@@ -10,6 +10,7 @@ import {
 } from "../styles/Navigation.styles";
 import { withRouter } from "react-router";
 import NavButton from "./NavButton";
+import { ReactComponent as Logo } from "../logo.svg";
 
 const NavigationMenu = ({ history, hasBackground, setBackground }) => {
   const [isOn, setState] = useState(false);
@@ -20,28 +21,23 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
     !!linking &&
       setTimeout(() => {
         switch (linking) {
-          case "home":
+          case "anasayfa":
             history.push("/");
             setState(false);
             setLink("");
             break;
-          case "about":
-            history.push("/about");
+          case "hakkimizda":
+            history.push("/hakkimizda");
             setState(false);
             setLink("");
             break;
-          case "work":
-            history.push("/work");
+          case "koleksiyon":
+            history.push("/koleksiyon");
             setState(false);
             setLink("");
             break;
-          case "news":
-            history.push("/news");
-            setState(false);
-            setLink("");
-            break;
-          case "contact":
-            history.push("/contact");
+          case "iletisim":
+            history.push("/iletisim");
             setState(false);
             setLink("");
             break;
@@ -72,11 +68,12 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
   };
 
   useEffect(() => {
+    console.log(window.location.pathname);
     const header = document.getElementById("header");
     const totop = document.getElementById("scroll-to-top");
     const sticky = header.offsetTop;
     const scrollCallBack = window.addEventListener("scroll", () => {
-      if (window.pageYOffset > sticky + 0) {
+      if (window.pageYOffset > sticky + 300) {
         header.classList.add("sticky");
         totop.classList.add("show");
       } else {
@@ -91,10 +88,57 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
 
   return (
     <header>
-      <div id="header"></div>
+      <div id="header">
+        <div className="nav-large">
+          <div
+            onClick={() => setLinkHandler("anasayfa")}
+            className={window.location.pathname == "/" ? "active" : ""}
+          >
+            Anasayfa
+          </div>
+          <div
+            onClick={() => setLinkHandler("hakkimizda")}
+            className={
+              window.location.pathname == "/hakkimizda" ? "active" : ""
+            }
+          >
+            Hakkımızda
+          </div>
+          <div
+            onClick={() => setLinkHandler("koleksiyon")}
+            className={
+              window.location.pathname == "/koleksiyon" ? "active" : ""
+            }
+          >
+            Koleksiyon
+          </div>
+          <div
+            onClick={() => setLinkHandler("iletisim")}
+            className={window.location.pathname == "/iletisim" ? "active" : ""}
+          >
+            İletişim
+          </div>
+
+          <span className="socicon">
+            <a
+              href="https://www.instagram.com/ecoleliving/"
+              target="_blank"
+              style={{
+                color: "inherit",
+              }}
+            >
+              <i className="fa  fa-instagram"></i>
+            </a>
+          </span>
+        </div>
+      </div>
       <div className="logo">
-        <img src="./img/logo.svg" className="img-fluid" alt="#" />
-        <span className="callus">Call Us: (+6221) 000 888 999</span>
+        <Logo
+          onClick={() => setLinkHandler("anasayfa")}
+          style={{
+            cursor: "pointer",
+          }}
+        />
       </div>
       <Wrapper open={isOn} shouldAnimate={shouldAnimate}>
         <Overlaybg
@@ -114,60 +158,51 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
             <Page
               className="mainBtn"
               variant="home"
-              onClick={() => setLinkHandler("home")}
+              onClick={() => setLinkHandler("anasayfa")}
             >
-              <LinkTag>Home</LinkTag>
+              <LinkTag>Anasayfa</LinkTag>
             </Page>
             <Page
               className="mainBtn"
               variant="about"
-              onClick={() => setLinkHandler("about")}
+              onClick={() => setLinkHandler("hakkimizda")}
             >
-              <LinkTag>About</LinkTag>
+              <LinkTag>Hakkımızda</LinkTag>
             </Page>
             <Page
               className="mainBtn"
               variant="work"
-              onClick={() => setLinkHandler("work")}
+              onClick={() => setLinkHandler("koleksiyon")}
             >
-              <LinkTag>Projects</LinkTag>
+              <LinkTag>Koleksiyon</LinkTag>
             </Page>
             <Page
               className="mainBtn"
               variant="about"
-              onClick={() => setLinkHandler("news")}
+              onClick={() => setLinkHandler("iletisim")}
             >
-              <LinkTag>News</LinkTag>
-            </Page>
-            <Page
-              className="mainBtn"
-              variant="about"
-              onClick={() => setLinkHandler("contact")}
-            >
-              <LinkTag>Contact</LinkTag>
+              <LinkTag>İletişim</LinkTag>
             </Page>
           </div>
 
           <div className="info">
-            <span>(+6221) 000 888 999</span>
-            <span className="link">support@homekins.com</span>
-            <span>129 Park street, New York 10903</span>
+            <span className="link">satis@ecoleliving.com</span>
+            <span>
+              <strong>Fabrika</strong>: Mahmudiye Mah. Hizmet Sk. No: 21
+            </span>
+            <span>
+              <strong>Mağaza</strong>: Mobilimo AVM
+            </span>
+            <span>İnegöl/BURSA</span>
           </div>
         </Body>
         <SocialContainer className="soc-icon" open={isOn}>
-          <span>Follow us:</span>
-          <span className="socicon">
-            <i className="fa fa-facebook-f"></i>
-          </span>
-          <span className="socicon">
-            <i className="fa fa-linkedin"></i>
-          </span>
-          <span className="socicon">
-            <i className="fa fa-twitter"></i>
-          </span>
-          <span className="socicon">
-            <i className="fa  fa-instagram"></i>
-          </span>
+          <span>Takip edin:</span>
+          <a href="https://www.instagram.com/ecoleliving/" target="_blank">
+            <span className="socicon">
+              <i className="fa  fa-instagram"></i>
+            </span>
+          </a>
         </SocialContainer>
       </Wrapper>
     </header>

@@ -77,12 +77,12 @@ export default class Responsive extends Component {
               />
             </div>
             <div className="desc">
-              <div className="tag">Interior</div>
-              <div className="name">Entertainment Unit</div>
+              <div className="tag">Ecole</div>
+              <div className="name">Yemek Odaları</div>
             </div>
             <div className="icon">
-              <span onClick={() => window.open("#", "_self")}>
-                View Project
+              <span onClick={() => window.open("/yemek", "_self")}>
+                Kategoriyi İncele
               </span>
             </div>
           </CustomSlide>
@@ -96,12 +96,12 @@ export default class Responsive extends Component {
               />
             </div>
             <div className="desc">
-              <div className="tag">Furniture</div>
-              <div className="name">Mounted Unit</div>
+              <div className="tag">Ecole</div>
+              <div className="name">Yatak Odaları</div>
             </div>
             <div className="icon">
-              <span onClick={() => window.open("#", "_self")}>
-                View Project
+              <span onClick={() => window.open("/yatak", "_self")}>
+                Kategoriyi İncele
               </span>
             </div>
           </CustomSlide>

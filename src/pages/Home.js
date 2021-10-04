@@ -27,7 +27,7 @@ const Home = ({ history }) => {
         </section>
       </Reveal>
 
-      <Featurehome />
+      {/* <Featurehome /> */}
 
       <Reveal effect="fadeInUp">
         <Abouthome />

@@ -17,12 +17,12 @@ export default () => (
             <div className="heading">Hakkımızda</div>
             <div className="content">
               Bir mobilya değil yaşam markası olma felsefesi ile yola çıkan
-              Ecole living; hayatınıza değer katmak için yanınızda. İçmimar Esat
-              Fişek tarafından tasarlanan Ecole living mobilyaları, şıklığı ve
-              rahatlığı yeniden tanımlayarak hayatınızı şekillendiriyor.
-              Zamansız çizgisini samimi detaylar ve kaliteli malzemeler ile
-              birleştiren Ecole living, uzun yıllar yaşam alanlarınızda olmaya
-              aday.
+              Ecole living; hayatınıza değer katmak için yanınızda.
+              İçmimarlarımız tarafından tasarlanan Ecole living mobilyaları,
+              şıklığı ve rahatlığı yeniden tanımlayarak hayatınızı
+              şekillendiriyor. Zamansız çizgisini samimi detaylar ve kaliteli
+              malzemeler ile birleştiren Ecole living, uzun yıllar yaşam
+              alanlarınızda olmaya aday.
             </div>
             <ul className="list-home">
               <li>Özgün Tasarımlar</li>

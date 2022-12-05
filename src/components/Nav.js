@@ -7,12 +7,19 @@ import {
   LinkTag,
   SocialContainer,
   Overlaybg,
+  LanguageLink,
 } from "../styles/Navigation.styles";
 import { withRouter } from "react-router";
 import NavButton from "./NavButton";
 import { ReactComponent as Logo } from "../logo.svg";
 
-const NavigationMenu = ({ history, hasBackground, setBackground }) => {
+const NavigationMenu = ({
+  history,
+  hasBackground,
+  setBackground,
+  language,
+  setLanguage,
+}) => {
   const [isOn, setState] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(false);
   const [linking, setLink] = useState("");
@@ -118,6 +125,14 @@ const NavigationMenu = ({ history, hasBackground, setBackground }) => {
           >
             İletişim
           </div>
+
+          <LanguageLink
+            onClick={() => {
+              setLanguage(language == "tr" ? "en" : "tr");
+            }}
+          >
+            {language}
+          </LanguageLink>
 
           <span className="socicon">
             <a

@@ -23,6 +23,7 @@ import Newsdetail from "./pages/detailNews";
 function App() {
   const [loading, setLoading] = useState(true);
   const [navBackground, setNavBack] = useState(false);
+  const [language, setLanguage] = useState("tr");
 
   useEffect(() => {
     setTimeout(() => {
@@ -40,6 +41,8 @@ function App() {
             firstTime={loading}
             hasBackground={navBackground}
             setBackground={(state) => setNavBack(state)}
+            language={language}
+            setLanguage={(lang) => setLanguage(lang)}
           />
           <Route path="/" exact component={Home} />
           <Route path="/hakkimizda" exact component={About} />

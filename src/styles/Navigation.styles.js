@@ -10,6 +10,10 @@ import {
 } from "../animation/keyframes";
 import { Bar1, Bar2, Bar3 } from "../components/NavButton";
 
+export const LanguageLink = styled.div`
+  text-transform: uppercase;
+`;
+
 export const Wrapper = styled.div`
   z-index: 999;
   right: 30px;

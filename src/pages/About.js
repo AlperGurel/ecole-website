@@ -7,8 +7,10 @@ import Carouselfeature from "../components/Carouselfeature";
 import Footer from "../components/Footer";
 
 import { Efect, Efect1, Efect2 } from "../styles/effect.styles";
+import useTranslation from "../useTranslation";
 
 const About = ({ history }) => {
+  const t = useTranslation();
   return (
     <div>
       <Efect />
@@ -27,21 +29,15 @@ const About = ({ history }) => {
         <section className="container-fluid pb-0">
           <div className="row m-2-hor">
             <div className="col-md-4">
-              <h1>Tarihçe</h1>
+              <h1>{t.aboutPage.title}</h1>
             </div>
             <div className="col-md-8">
-              <div className="content">
-                Ecole Living, yıllarını mobilya sektöründe geçirmiş olan bir
-                ustanın 1994 yılında Ankara'da kurduğu bir imalathanede hayat
-                bulmuştur. Ecole living'in ilk başarısızlık öyküsü ise, bu
-                imalathanenin kapanmasıyla yazılmıştır. Usta, 1999 yılında yeni
-                bir yolculuğa başlamak üzere İnegöl'e göç etmiştir. <br />
-                2001 yılında iki kişinin ortaklığı ile İnegöl'de yeniden
-                başlayan serüven, 2004 yılından beri ortak olmaksızın devam
-                etmektedir. Uzun ömürlü ahşap mobilya üretimiyle evinize doğalın
-                kapısını aralayan Ecole living, Nisan 2021 tarihinde açılan
-                Mobilimo AVM'deki mağazasında sizlere hizmetini sürdürmektedir.
-              </div>
+              <div
+                className="content"
+                dangerouslySetInnerHTML={{
+                  __html: t.aboutPage.content,
+                }}
+              ></div>
             </div>
           </div>
         </section>
@@ -55,7 +51,7 @@ const About = ({ history }) => {
         <section className="container-fluid py-0">
           <div className="row m-2-hor">
             <div className="col-12">
-              <div className="heading">Koleksiyon</div>
+              <div className="heading">{t.collection}</div>
             </div>
           </div>
           <div className="row">

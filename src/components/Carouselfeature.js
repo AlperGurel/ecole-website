@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { koleksiyon } from "../data";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
+import useTranslation from "../useTranslation";
 
 class CustomSlide extends Component {
   render() {
@@ -14,6 +15,7 @@ class CustomSlide extends Component {
 }
 
 export default function Responsive() {
+  const t = useTranslation();
   var settings = {
     dots: false,
     infinite: false,
@@ -126,8 +128,8 @@ export default function Responsive() {
               <img src={el.src} className="img-fluid" alt="Imageteam" />
             </div>
             <div className="desc">
-              <div className="name">{el.title}</div>
-              <div className="content">{el.caption}</div>
+              <div className="name">{t.products[el.slug]?.title}</div>
+              <div className="content">{t.products[el.slug]?.caption}</div>
             </div>
           </CustomSlide>
         ))}

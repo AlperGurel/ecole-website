@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/vertical.css";
+import useTranslation from "../useTranslation";
 
 const content = [
   {
@@ -26,44 +27,47 @@ const content = [
   },
 ];
 
-export default () => (
-  <Slider className="slider-wrapper" autoplay={6000}>
-    {content.map((item, index) => (
-      <div
-        key={index}
-        className="slider-content"
-        style={{ background: `url('${item.image}') no-repeat center center` }}
-      >
+export default () => {
+  const t = useTranslation();
+  return (
+    <Slider className="slider-wrapper" autoplay={6000}>
+      {content.map((item, index) => (
         <div
-          className="inner"
-          style={{
-            position: "relative",
-          }}
+          key={index}
+          className="slider-content"
+          style={{ background: `url('${item.image}') no-repeat center center` }}
         >
-          <h1
+          <div
+            className="inner"
             style={{
-              fontSize: "23px",
+              position: "relative",
             }}
           >
-            {item.title}
-          </h1>
-          <p
-            style={{
-              fontSize: "110px",
-              color: "rgba(255, 255, 255, 0.253)",
-              position: "absolute",
-              top: "-100px",
-              left: "100px",
-            }}
-          >
-            {item.description}
-          </p>
-          <button onClick={() => window.open(item.link, "_self")}>
-            <span className="shine"></span>
-            <span>{item.button}</span>
-          </button>
+            <h1
+              style={{
+                fontSize: "23px",
+              }}
+            >
+              {t.sliderHome[index].title}
+            </h1>
+            <p
+              style={{
+                fontSize: "110px",
+                color: "rgba(255, 255, 255, 0.253)",
+                position: "absolute",
+                top: "-100px",
+                left: "100px",
+              }}
+            >
+              {t.sliderHome[index].description}
+            </p>
+            <button onClick={() => window.open(item.link, "_self")}>
+              <span className="shine"></span>
+              <span>{t.sliderButton}</span>
+            </button>
+          </div>
         </div>
-      </div>
-    ))}
-  </Slider>
-);
+      ))}
+    </Slider>
+  );
+};

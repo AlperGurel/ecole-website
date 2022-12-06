@@ -26,6 +26,12 @@ function App() {
   const [language, setLanguage] = useState("tr");
 
   useEffect(() => {
+    console.log("saved language", language);
+    localStorage.setItem("language", language);
+    window.dispatchEvent(new Event("storage"));
+  }, [language]);
+
+  useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 3000);

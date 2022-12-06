@@ -11,6 +11,7 @@ import { koleksiyon } from "../data";
 
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
+import useTranslation from "../useTranslation";
 
 const Works = ({ history }) => {
   const [toCase, setCase] = useState("");
@@ -32,6 +33,8 @@ const Works = ({ history }) => {
   const handleCaseSwap = (e, uri) =>
     e.x < coord + 15 && e.x > coord - 15 && setCase(uri);
 
+  const t = useTranslation();
+
   return (
     <div>
       <Efect />
@@ -44,7 +47,7 @@ const Works = ({ history }) => {
         <section className="container-fluid pb-0">
           <div className="row m-2-hor">
             <div className="col-md-12">
-              <h1>Koleksiyon</h1>
+              <h1>{t.collection}</h1>
             </div>
           </div>
         </section>
@@ -114,11 +117,11 @@ const Works = ({ history }) => {
                               />
                             </div>
                             <div className="desc">
-                              <div className="tag">{el.category}</div>
+                              <div className="tag">{t[el.category]}</div>
                               <div className="name">{el.name}</div>
                             </div>
                             <div className="icon">
-                              <span>İncele</span>
+                              <span>{t.view}</span>
                             </div>
                           </Overlay>
                         </LinkWrap>

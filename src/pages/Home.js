@@ -13,8 +13,10 @@ import Accomplish from "../components/Accomplish";
 import Carouselnews from "../components/Carouselnews";
 import Footer from "../components/Footer";
 import { Efect, Efect1, Efect2 } from "../styles/effect.styles";
+import useTranslation from "../useTranslation";
 
 const Home = ({ history }) => {
+  const t = useTranslation();
   return (
     <div>
       <Efect />
@@ -37,7 +39,7 @@ const Home = ({ history }) => {
         <section className="container-fluid">
           <div className="row m-2-hor">
             <div className="col-12">
-              <div className="heading">Koleksiyon</div>
+              <div className="heading">{t.collection}</div>
             </div>
             <div className="col-12">
               <Carouselfeature />
@@ -50,7 +52,7 @@ const Home = ({ history }) => {
         <section className="container-fluid py-0">
           <div className="row m-2-hor">
             <div className="col-12">
-              <div className="heading">Kategoriler</div>
+              <div className="heading">{t.categories}</div>
             </div>
           </div>
           <div className="row">

@@ -1,5 +1,6 @@
 const koleksiyon = [
   {
+    slug: "piramit-yatak",
     title: "Piramit Yatak Odası",
     caption: "Ahşapın göz alıcı formu",
     src: "./img/koleksiyon/piramit-yatak.jpg",
@@ -10,6 +11,7 @@ const koleksiyon = [
     rIndex: 0,
   },
   {
+    slug: "piramit-yemek",
     title: "Piramit Yemek Odası",
     caption: "Özgün parçalarıyla evinizin atmosferini değiştirecek",
     src: "./img/koleksiyon/piramit-yemek.jpg",
@@ -20,6 +22,7 @@ const koleksiyon = [
     rIndex: 1,
   },
   {
+    slug: "alya-yatak",
     title: "Alya Yatak Odası",
     caption: "Rahatlığı ve şıklığı bir araya getiriyor",
     src: "./img/koleksiyon/alya-yatak.jpg",
@@ -30,6 +33,7 @@ const koleksiyon = [
     rIndex: 2,
   },
   {
+    slug: "alya-yemek",
     title: "Alya Yemek Odası",
     caption: "Göz alıcı detaylarıyla evinizin havasını değiştirecek",
     src: "./img/koleksiyon/alya-yemek.jpg",
@@ -40,6 +44,7 @@ const koleksiyon = [
     rIndex: 3,
   },
   {
+    slug: "ardic-yatak",
     title: "Ardıç Yatak Odası",
     caption: "Özgün detaylarıyla konfordan ödün vermeyenler için",
     src: "./img/koleksiyon/ardic-yatak.jpg",
@@ -50,6 +55,7 @@ const koleksiyon = [
     rIndex: 4,
   },
   {
+    slug: "ardic-yemek",
     title: "Ardıç Yemek Odası",
     caption: "Her bir detayı özenle tasarlandı",
     src: "./img/koleksiyon/ardic-yemek.jpg",
@@ -60,6 +66,7 @@ const koleksiyon = [
     rIndex: 5,
   },
   {
+    slug: "country-yatak",
     title: "Country Yatak Odası",
     caption: "Klasik mobilyalarla modern evler için",
     src: "./img/koleksiyon/country-yatak.jpg",
@@ -70,6 +77,7 @@ const koleksiyon = [
     rIndex: 6,
   },
   {
+    slug: "country-yemek",
     title: "Petek Yatak Odası",
     caption: "Zerafet ve şıklığın buluştuğu",
     src: "./img/koleksiyon/petek-yatak.jpg",
@@ -80,6 +88,7 @@ const koleksiyon = [
     rIndex: 7,
   },
   {
+    slug: "petek-yemek",
     title: "Petek Yemek Odası",
     caption: "Modern dokunuşlarla evinizi bambaşka bir yere götürecek",
     src: "./img/koleksiyon/petek-yemek.jpg",
@@ -90,6 +99,7 @@ const koleksiyon = [
     rIndex: 8,
   },
   {
+    slug: "pirinc-yatak",
     title: "Pirinç Yatak Odası",
     caption: "Eşsiz tasarımıyla evinize eşlik edecek",
     src: "./img/koleksiyon/pirinc-yatak.jpg",
@@ -100,6 +110,7 @@ const koleksiyon = [
     rIndex: 9,
   },
   {
+    slug: "pirinc-yemek",
     title: "Pirinç Yemek Odası",
     caption: "Gösterişli tasarımıyla salonunuza yeni bir soluk getirecek",
     src: "./img/koleksiyon/pirinc-yemek.jpg",
@@ -110,6 +121,7 @@ const koleksiyon = [
     rIndex: 10,
   },
   {
+    slug: "wood-yatak",
     title: "Wood Yatak Odası",
     caption: "Zarif dizaynıyla sadelik arayanlar için",
     src: "./img/koleksiyon/wood-yatak.jpg",
@@ -120,6 +132,7 @@ const koleksiyon = [
     rIndex: 11,
   },
   {
+    slug: "wood-yemek",
     title: "Wood Yemek Odası",
     caption: "Modern planıyla rahatlık sunan",
     src: "./img/koleksiyon/wood-yemek.jpg",

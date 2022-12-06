@@ -1,37 +1,33 @@
 import React from "react";
+import useTranslation from "../useTranslation";
 
-export default () => (
-  <section className="container-fluid">
-    <div className="row m-2-hor">
-      <div className="col-md-6 pt-5">
-        <div className="col-home">
-          <div className="thumb">
-            <img src="./img/about-us.jpg" className="img-fluid" alt="#" />
-          </div>
-        </div>
-      </div>
-
-      <div className="col-md-6">
-        <div className="dflex-center">
-          <div className="col-home mt-md-0 mt-5">
-            <div className="heading">Hakkımızda</div>
-            <div className="content">
-              Bir mobilya değil yaşam markası olma felsefesi ile yola çıkan
-              Ecole living; hayatınıza değer katmak için yanınızda.
-              İçmimarlarımız tarafından tasarlanan Ecole living mobilyaları,
-              şıklığı ve rahatlığı yeniden tanımlayarak hayatınızı
-              şekillendiriyor. Zamansız çizgisini samimi detaylar ve kaliteli
-              malzemeler ile birleştiren Ecole living, uzun yıllar yaşam
-              alanlarınızda olmaya aday.
+export default () => {
+  const t = useTranslation();
+  return (
+    <section className="container-fluid">
+      <div className="row m-2-hor">
+        <div className="col-md-6 pt-5">
+          <div className="col-home">
+            <div className="thumb">
+              <img src="./img/about-us.jpg" className="img-fluid" alt="#" />
             </div>
-            <ul className="list-home">
-              <li>Özgün Tasarımlar</li>
-              <li>Temiz İşçilik</li>
-              <li>Yılların Verdiği Ustalık Tecrübesi</li>
-            </ul>
+          </div>
+        </div>
+
+        <div className="col-md-6">
+          <div className="dflex-center">
+            <div className="col-home mt-md-0 mt-5">
+              <div className="heading">{t.aboutHome.title}</div>
+              <div className="content">{t.aboutHome.description}</div>
+              <ul className="list-home">
+                {t.aboutHome.list.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};

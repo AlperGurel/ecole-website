@@ -12,6 +12,7 @@ import {
 import { withRouter } from "react-router";
 import NavButton from "./NavButton";
 import { ReactComponent as Logo } from "../logo.svg";
+import useTranslation from "../useTranslation";
 
 const NavigationMenu = ({
   history,
@@ -23,7 +24,7 @@ const NavigationMenu = ({
   const [isOn, setState] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(false);
   const [linking, setLink] = useState("");
-
+  const t = useTranslation();
   useEffect(() => {
     !!linking &&
       setTimeout(() => {
@@ -101,7 +102,7 @@ const NavigationMenu = ({
             onClick={() => setLinkHandler("anasayfa")}
             className={window.location.pathname == "/" ? "active" : ""}
           >
-            Anasayfa
+            {t.home}
           </div>
           <div
             onClick={() => setLinkHandler("hakkimizda")}
@@ -109,7 +110,7 @@ const NavigationMenu = ({
               window.location.pathname == "/hakkimizda" ? "active" : ""
             }
           >
-            Hakkımızda
+            {t.about}
           </div>
           <div
             onClick={() => setLinkHandler("koleksiyon")}
@@ -117,13 +118,13 @@ const NavigationMenu = ({
               window.location.pathname == "/koleksiyon" ? "active" : ""
             }
           >
-            Koleksiyon
+            {t.collection}
           </div>
           <div
             onClick={() => setLinkHandler("iletisim")}
             className={window.location.pathname == "/iletisim" ? "active" : ""}
           >
-            İletişim
+            {t.contact}
           </div>
 
           <LanguageLink
@@ -131,6 +132,8 @@ const NavigationMenu = ({
               setLanguage(language == "tr" ? "en" : "tr");
             }}
           >
+            {language == "en" && "🇺🇸 "}
+            {language == "tr" && "🇹🇷 "}
             {language}
           </LanguageLink>
 

@@ -7,8 +7,10 @@ import SimpleMap from "../components/Map";
 import Footer from "../components/Footer";
 
 import { Efect, Efect1, Efect2 } from "../styles/effect.styles";
+import useTranslation from "../useTranslation";
 
 const Contact = ({ history }) => {
+  const t = useTranslation();
   function sendEmail(e) {
     const success = document.getElementById("success");
     const button = document.getElementById("buttonsent");
@@ -49,7 +51,8 @@ const Contact = ({ history }) => {
           <div className="row">
             <div className="col-12">
               <h1>
-                Bize <span className="color">ulaşın</span>.
+                {t.contactUs[0]} <span className="color">{t.contactUs[1]}</span>
+                .
               </h1>
             </div>
           </div>
@@ -64,15 +67,10 @@ const Contact = ({ history }) => {
             </div>
             <div className="col-md-6">
               <div className="text-side">
-                <h3 className="heading">İletişime geçin </h3>
-                <p>
-                  Yaptığımız işi severek yapıyor ve bu sevgiyi ürünlerimize
-                  kalite ve el emeği olarak yansıtıyoruz. Bu süreçte
-                  geribildirim almayı da ihmal etmiyoruz. Her türlü görüş ve
-                  önerileriniz için bize yazabilirsiniz.
-                </p>
+                <h3 className="heading">{t.contactPage.title} </h3>
+                <p>{t.contactPage.description}</p>
                 <div className="address">
-                  <div className="heading">Fabrika</div>
+                  <div className="heading">{t.contactPage.factory}</div>
                   <div className="list">
                     <i className="fa fa-map-marker"></i>
                     Mahmudiye Mah. Hizmet Sk. No: 21
@@ -109,11 +107,11 @@ const Contact = ({ history }) => {
             <div className="col-md-6">
               <div className="form-side">
                 <form className="formcontact" onSubmit={sendEmail}>
-                  <label>İsim</label>
+                  <label>{t.contactPage.form.name}</label>
                   <input type="text" name="user_name" required />
-                  <label>E-Posta</label>
+                  <label>{t.contactPage.form.email}</label>
                   <input type="email" name="user_email" required />
-                  <label>Mesaj</label>
+                  <label>{t.contactPage.form.mesaj} </label>
                   <textarea name="message" required />
                   <div id="success" className="hide">
                     Mesajınız bize ulaştı...
@@ -123,7 +121,7 @@ const Contact = ({ history }) => {
                   </div>
                   <button type="submit" id="buttonsent">
                     <span className="shine"></span>
-                    <span>Gönder</span>
+                    <span>{t.contactPage.form.button}</span>
                   </button>
                 </form>
               </div>
